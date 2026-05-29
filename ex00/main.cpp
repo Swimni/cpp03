@@ -1,13 +1,14 @@
 #include "ClapTrap.hpp"
 
-int main() {
-    ClapTrap tic("tic");
-    ClapTrap tac("tac");
+int main()
+{
+	ClapTrap bot("bot");
 
-    tic.attack("tac");
-    tac.takeDamage(3);
-    tac.beRepaired(2);
+	for (int i = 0; i < 10; i++)
+		bot.attack("enemy");
 
-    return 0;
+	bot.takeDamage(50);
+
+	bot.attack("enemy");
+	bot.beRepaired(5);
 }
-
